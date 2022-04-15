@@ -7,6 +7,9 @@ let &t_ut=''
 set t_vb=
 set ttyfast
 "set lazyredraw
+let &t_SI = "\e[6 q"
+let &t_SR = "\e[4 q"
+let &t_EI = "\e[2 q"
 
 " General
 set number	" Show line numbers

@@ -64,10 +64,11 @@ call plug#end()
 
 "---------------------------------------------------------
 
+set termguicolors
+
 if exists('+termguicolors') && ($TERM == "xterm-kitty" || $TERM == "screen")
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
 endif
 
 let g:tokyonight_style = 'night' " available: night, storm

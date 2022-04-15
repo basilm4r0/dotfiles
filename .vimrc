@@ -5,8 +5,8 @@ set path+=**
 set wildmenu
 let &t_ut=''
 set t_vb=
-"set t_ut=
-"set ttyfast
+set ttyfast
+"set lazyredraw
 
 " General
 set number	" Show line numbers
@@ -22,10 +22,11 @@ set ignorecase	" Always case-insensitive
 set incsearch	" Searches for strings incrementally
 
 set autoindent	" Auto-indent new lines
-set shiftwidth=4	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
-set softtabstop=4	" Number of spaces per Tab
+set tabstop=4
+set shiftwidth=4	" Number of auto-indent spaces
+set softtabstop=0 noexpandtab	" Number of spaces per Tab
 
 "" Advanced
 set ruler	" Show row and column ruler information
@@ -33,18 +34,17 @@ set ruler	" Show row and column ruler information
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
-map <F1> :w <CR> :!gcc -g % -o %< -lm && ./%< <CR>
+map <F1> :let @/="" <CR>
 
-map <F2> :let @/="" <CR>
+map <F5> :w <CR> :!gcc -g % -o %< -lm && ./%< <CR>
 
 "---------------------------------------------------------
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
-"bluewery
-Plug 'relastle/bluewery.vim'
+"tokyonight
 Plug 'ghifarit53/tokyonight-vim'
 
 "airline
@@ -60,14 +60,6 @@ Plug 'dense-analysis/ale'
 call plug#end()
 
 "---------------------------------------------------------
-
-"for dark
-"colorscheme bluewery
-"let g:lightline = { 'colorscheme': 'bluewery' }
-
-" For light
-"colorscheme bluewery-light
-"let g:lightline = { 'colorscheme': 'bluewery_light' }
 
 if exists('+termguicolors') && ($TERM == "xterm-kitty" || $TERM == "screen")
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

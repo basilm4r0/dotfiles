@@ -15,7 +15,7 @@ let &t_EI = "\e[2 q"
 set number	" Show line numbers
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
-set textwidth=100	" Line wrap (number of cols)
+set textwidth=150	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set visualbell	" Use visual bell (no beeping)
 

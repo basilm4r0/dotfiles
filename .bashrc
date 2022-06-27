@@ -148,3 +148,21 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 #source /usr/share/nvm/init-nvm.sh
 #export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+#enter_directory() {
+  #if [[ $PWD == $PREV_PWD ]]; then
+    #return
+  #fi
+#
+  #if [[ "$PWD" =~ "$PREV_PWD" && ! -f ".nvmrc" ]]; then
+    #return
+  #fi
+#
+  #PREV_PWD=$PWD
+  #if [[ -f ".nvmrc" ]]; then
+    #nvm use
+    #NVM_DIRTY=true
+  #elif [[ $NVM_DIRTY = true ]]; then
+    #nvm use default
+    #NVM_DIRTY=false
+  #fi
+#}

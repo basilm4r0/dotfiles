@@ -139,7 +139,7 @@ ex ()
 }
 
 # Custom lines:
-EDITOR=vim
+EDITOR=nvim
 VISUAL=$EDITOR
 set -o vi
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"

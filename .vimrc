@@ -6,6 +6,7 @@ set wildmenu
 let &t_ut=''
 set t_vb=
 set ttyfast
+set clipboard+=unnamedplus
 "set lazyredraw
 let &t_SI = "\e[6 q"
 let &t_SR = "\e[4 q"
@@ -58,6 +59,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
+Plug 'github/copilot.vim'
 
 "initialize plugin system
 call plug#end()

@@ -70,9 +70,9 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\u\[\e[36m\]:\[\e[m\]\w\[\e[36m\]\\$\[\e[m\] '
+		PS1='\[\e[31m\]\u\[\e[36m\]:\[\e[m\]\w\[\e[36m\]\\$\[\e[m\] '
 	else
-		PS1='\u\[\e[36m\]:\[\e[m\]\w\[\e[36m\]\\$\[\e[m\] '
+		PS1='\[\e[31m\]\u\[\e[36m\]:\[\e[m\]\w\[\e[36m\]\\$\[\e[m\] '
 	fi
 
 	alias ls='ls --color=auto'

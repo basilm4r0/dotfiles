@@ -1,6 +1,7 @@
 $include /etc/inputrc
 
 set show-mode-in-prompt on
+set completion-ignore-case on
 
 $if term=linux
 	set vi-ins-mode-string \1\e[?0c\2

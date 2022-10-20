@@ -141,6 +141,7 @@ ex ()
 # Custom lines:
 EDITOR=nvim
 VISUAL=$EDITOR
+BROWSER=firefox
 set -o vi
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 

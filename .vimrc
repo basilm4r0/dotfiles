@@ -48,15 +48,9 @@ map <F5> :w <CR> :!gcc -g % -o %< -lm && ./%< <CR>
 " - For Neovim: stdpath('data') . '/plugged'
 call plug#begin('~/.vim/plugged')
 
-"tokyonight
 Plug 'ghifarit53/tokyonight-vim'
-
-"airline
 Plug 'vim-airline/vim-airline'
-
-"airline-themes
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'

@@ -54,6 +54,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'
+Plug 'sheerun/vim-polyglot'
 
 "initialize plugin system
 call plug#end()

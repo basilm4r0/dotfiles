@@ -7,7 +7,7 @@ let &t_ut=''
 set t_vb=
 set ttyfast
 set clipboard+=unnamedplus
-"set lazyredraw
+set lazyredraw
 let &t_SI = "\e[6 q"
 let &t_SR = "\e[4 q"
 let &t_EI = "\e[2 q"
@@ -15,8 +15,9 @@ let &t_EI = "\e[2 q"
 " General
 set number	" Show line numbers
 set linebreak	" Break lines at word (requires Wrap lines)
-set showbreak=+++ 	" Wrap-broken line prefix
-set textwidth=150	" Line wrap (number of cols)
+"set showbreak=+++ 	" Wrap-broken line prefix
+set textwidth=0	" Line wrap (number of cols)
+set formatoptions=tcqrn1j	" Format options
 set showmatch	" Highlight matching brace
 set visualbell	" Use visual bell (no beeping)
 
@@ -39,8 +40,12 @@ set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
 map <F1> :let @/="" <CR>
-
 map <F5> :w <CR> :!gcc -g % -o %< -lm && ./%< <CR>
+
+nnoremap j gj
+nnoremap gj j
+nnoremap k gk
+nnoremap gk k
 
 "---------------------------------------------------------
 

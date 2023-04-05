@@ -24,6 +24,7 @@ set visualbell	" Use visual bell (no beeping)
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
 set ignorecase	" Always case-insensitive
+set nowrapscan  " Don't wrap when scanning
 set incsearch	" Searches for strings incrementally
 
 set autoindent	" Auto-indent new lines

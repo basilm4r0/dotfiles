@@ -139,9 +139,9 @@ ex ()
 }
 
 # Custom lines:
-EDITOR=nvim
-VISUAL=$EDITOR
-BROWSER=firefox
+export EDITOR=nvim
+export VISUAL=$EDITOR
+export BROWSER=firefox
 set -o vi
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 

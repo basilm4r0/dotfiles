@@ -47,6 +47,9 @@ nnoremap j gj
 nnoremap gj j
 nnoremap k gk
 nnoremap gk k
+" Make j and k move visual lines in visual mode but not in line visual mode
+xnoremap <expr> j mode() ==# 'V' ? 'j' : 'gj'
+xnoremap <expr> k mode() ==# 'V' ? 'k' : 'gk'
 
 "---------------------------------------------------------
 
@@ -118,6 +121,11 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " ALE
-let g:ale_linters = {'python': ['flake8'], 'java': [], 'C': ['clang-tidy'], 'sh':['shellcheck'], 'verilog' : ['yosys']}
+let g:ale_linters = {'python': ['flake8'],
+    \                'java': [],
+    \                'C': ['clang-tidy'],
+    \                'sh':['shellcheck'],
+    \                'verilog' : ['verilator'],
+    \                'systemverilog' : ['verilator']}
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'python': ['black']}
 let g:ale_fix_on_save = 1

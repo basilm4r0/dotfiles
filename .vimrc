@@ -123,7 +123,8 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " ALE
 let g:ale_linters = {'python': ['flake8'],
     \                'java': [],
-    \                'C': ['clang-tidy'],
+    \                'C': ['clangd'],
+    \                'cpp': ['clangd'],
     \                'sh':['shellcheck'],
     \                'verilog' : ['verilator'],
     \                'systemverilog' : ['verilator']}

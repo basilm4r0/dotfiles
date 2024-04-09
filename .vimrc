@@ -118,6 +118,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " ALE
-let g:ale_linters = {'python': ['flake8'], 'java': [], 'C': ['clang-tidy'], 'cpp': ['clang-tidy'], 'sh':['shellcheck']}
+let g:ale_linters = {'python': ['flake8'], 'java': [], 'C': ['clangd'], 'cpp': ['clangd'], 'sh':['shellcheck']}
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'python': ['black']}
 let g:ale_fix_on_save = 1

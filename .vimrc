@@ -42,6 +42,7 @@ set backspace=indent,eol,start	" Backspace behaviour
 
 map <F1> :let @/="" <CR>
 map <F5> :w <CR> :!gcc -g % -o %< -lm && ./%< <CR>
+map <F6> :w <CR> :!g++ -g % -o %< -lm && ./%< <CR>
 
 nnoremap j gj
 nnoremap gj j
